@@ -41,8 +41,9 @@ window.addEventListener('mousemove',function(el){
 
 //7.
 window.addEventListener('touchmove',function(el){
-    mouse.x=el.x;
-    mouse.y=el.y;
+    el.preventDefault;
+    mouse.x=el.originalEvent.touches ? e.originalEvent.touches[0].pageX : el.pageX;
+    mouse.y=el.originalEvent.touches ? e.originalEvent.touches[0].pageY : el.pageY;
 });
 
 //setting up the canvas
