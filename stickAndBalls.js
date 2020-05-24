@@ -65,11 +65,12 @@ let maxScoreLabel=document.querySelector("#max-score");
 let requestId=0;
 let stickWidth=200;                                                   //changable
 let stickHeight=30;                                                   //changable
+let stickElevation=100;                                               //changable
 let ballRadius=20;                                                    //changable
 let stickColor="rgb(200,200,200)";                                    //changable
 let ballColor="rgb(50,100,190)";                                      //changable
 let initialVelocity=4,vdiff=2;                                        //changable
-let levelStep=5;                                                     //changable
+let levelStep=5;                                                      //changable
 let numberOfBalls=0;                                                  
 let play=0;
 let gameOver=0;
@@ -176,7 +177,7 @@ function gameOverReplay(){
 //game Objects required(Classes)
 class Stick {
     constructor(width,height,color){
-        this.y=canvas.height-height;
+        this.y=canvas.height-height-stickElevation;
         this.x=Math.floor(randomNumber(10,canvas.width-width-10));
         this.width=width;
         this.height=height;
