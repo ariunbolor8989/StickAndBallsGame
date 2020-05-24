@@ -1,3 +1,6 @@
+//messages
+alert(`CAUTION (if using a mobile device)!! don't drag your touch to position the stick, just tap to position the stick`);
+
 //utilities
 //1.
 function randomNumber(min,max){
@@ -38,8 +41,8 @@ window.addEventListener('mousemove',function(el){
 
 //7.
 window.addEventListener('touchmove',function(el){
-    mouse.x=el.clientX;
-    mouse.y=el.clientY;
+    mouse.x=el.x;
+    mouse.y=el.y;
 });
 
 //setting up the canvas
