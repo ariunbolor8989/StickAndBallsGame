@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+        <style>
+            /*all*/
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            /*Start-menu-container*/
+            .start-menu-container {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                display: flex;
+                flex-direction: column;
+            }
+            .start-menu-container h2 {
+                font-size: 1.7rem;
+                font-family: 'Chelsea Market', cursive;
+                color: rgb(200,200,200);
+            }
+            .option-buttons-container {
+                display: flex;
+                justify-content: center;
+            }
+            .option-buttons-container button {
+                position: relative;
+                margin: 20px;
+                width: 50%;
+                height: 40px;
+                font-size: 2rem;
+                background: rgba(202,202,202,0.5);
+                border: none;
+                outline: none;
+                font-family: 'Chelsea Market', cursive;
+            }
+            .option-buttons-container button:hover {
+                box-shadow: 0px 0px 4px 4px rgba(150,150,150,0.5);
+            }
+            #replay {
+                width: 150px;
+            }
+            /*Score container*/
+            .score-container {
+                position: absolute;
+                right: 0;
+                margin: 20px;
+                width: 250px;
+            }
+            .score-container p {
+                font-family: 'Chelsea Market', cursive;
+                color: rgb(200,200,200);
+                font-size: 1.8rem;
+            }
+            .hide {
+                display: none;
+            }
+        </style>
+        <title>Stick And Balls</title>
+    </head>
+    <body>
+        <div class="start-menu-container">
+            <h2 id="message">Select the number of balls : </h2>
+            <div class="option-buttons-container">
+                <button id="ball1">1</button>
+                <button id="ball2">2</button>
+                <button class="hide" id="play">Play</button>
+                <button class="hide" id="replay">Replay</button>
+            </div>
+        </div>
+        <div class="score-container">
+            <p id="level">Level : </p>
+            <p id="score">Score : </p>
+            <p id="max-score">Max Score : </p>
+        </div>
+        <canvas class="canvas"></canvas>
+        <script src="stickAndBalls.js"></script>
+    </body>
+</html>
