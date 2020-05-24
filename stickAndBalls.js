@@ -36,6 +36,12 @@ window.addEventListener('mousemove',function(el){
     mouse.y=el.clientY;
 });
 
+//7.
+window.addEventListener('touchmove',function(el){
+    mouse.x=el.clientX;
+    mouse.y=el.clientY;
+});
+
 //setting up the canvas
 let canvas=document.querySelector('.canvas');
 canvas.height=window.innerHeight-4;
