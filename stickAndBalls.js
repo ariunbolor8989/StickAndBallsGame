@@ -46,6 +46,12 @@ window.addEventListener('touchmove',function(el){
     mouse.y=el.originalEvent.touches ? e.originalEvent.touches[0].pageY : el.pageY;
 });
 
+//8.
+window.addEventListener('drag',function(el){
+    mouse.x=el.x;
+    mouse.y=el.y;
+});
+
 //setting up the canvas
 let canvas=document.querySelector('.canvas');
 canvas.height=window.innerHeight-4;
