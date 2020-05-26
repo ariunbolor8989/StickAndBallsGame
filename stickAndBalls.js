@@ -227,7 +227,7 @@ class Ball {
             this.dx=-this.dx;
         if(this.y<=this.r)
             this.dy=-this.dy;
-        if(this.y+this.r==stick.y && this.x>=stick.x && this.x<=(stick.x+stick.width)){
+        if((this.y+this.r-this.dy<=stick.y && stick.y<=this.y+this.r) && (this.x>=stick.x && this.x<=(stick.x+stick.width))){
             this.dy=-this.dy;
             score++;
             if(score%levelStep==0)
@@ -262,9 +262,9 @@ function animate(){
     else if(play){
         requestId=requestAnimationFrame(animate);
         c.clearRect(0,0,canvas.width,canvas.height);
-        stick.move();
         for(let i=0;i<numberOfBalls;i++)
             balls[i].move();
+        stick.move();
         levelLabel.textContent="Level : "+level;
         scoreLabel.textContent="Score : "+score;
     }
